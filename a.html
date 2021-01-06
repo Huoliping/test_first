@@ -1,12 +1,49 @@
 
 <!DOCTYPE html>
 <html lang="zh-cn">
+<style type="text/css">
+    canvas#live2dcanvas {
+        border: 0 !important; #可避免虚线问题
+        right: 0;
+        height: 120%; 
+		width:100%;
+    }
+</style>
 
 <body >
-        <h1>网速忙，20秒后有福利</h1>
         <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
-  <script type="text/javascript">
-    L2Dwidget.init();
+	
+
+<!-- 右下角live2d效果 -->
+<script type="text/javascript">
+setTimeout(() => {
+        L2Dwidget.init({
+                "model": {
+                        "scale": 0.5
+                },
+                "display": {
+                        "position": "center",
+                        "width": 180,
+                        "height": 260,
+                        "hOffset": 100,
+                        "vOffset": 20
+                },
+                "mobile": {
+                        "show": true,
+                        "scale": 0.5
+                },
+                "react": {
+                        "opacityDefault": 0.7,
+                        "opacityOnHover": 0.2
+                }
+        });
+}, 1000)
 </script>
+
+</div>
 </body>
 </html>
+
+
+
+
